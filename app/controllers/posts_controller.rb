@@ -3,6 +3,7 @@ class PostsController < ApplicationController
   before_action :authenticate_user!, except: %i[ index show ]
   before_action :authorize_user!, only: %i[ edit update destroy ]
 
+
   # GET /posts or /posts.json
   def index
     @posts = Post.all
